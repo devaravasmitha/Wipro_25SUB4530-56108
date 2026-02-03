@@ -1,4 +1,4 @@
-name: Build and deploy JAR app to Azure Web App - myazwebapp
+name: Build and deploy JAR app to Azure Web App - myappvasmitha
 
 on:
   push:
@@ -33,7 +33,6 @@ jobs:
     needs: build
     environment:
       name: 'Production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
     
     steps:
       - name: Download artifact from build job
